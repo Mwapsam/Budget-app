@@ -36,6 +36,67 @@
       overflow-y: auto;
       min-height: 100vh;
     }
+
+    .login-wrapper {
+        height: 100vh;
+        width: 100%;
+      }
+
+      .login {
+          width: 100%;
+          height: min-height;
+          background-color: var(--white);
+      }
+
+      .form-control {
+        border: none;
+        padding: 0;
+      }
+
+    input[type="submit"] {
+        color: var(--white);
+        background-color: var(--primary-color);
+        border: none;
+    }
+
+    input[type="email"], input[type="password"]:focus {
+        border: none;
+        padding: 0 20px;
+        width: 100%;
+    }
+
+      .form-label {
+          margin: 0;
+          padding: 0 15px;
+          color: var(--neutral-color-1);
+      }
+
+      .simple-header {
+        background-color: var(--primary-color);
+        color: var(--white);
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        padding: 15px;
+      }
+
+      .links a {
+        color: var(--neutral-color-1);
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+      }
+
+      .line {
+        margin: 0 30px 15px 20px;
+        text-align: center;
+        height: 1px;
+        background-color: var(--neutral-color-1);
+      }
+      
   }
 
   @media only screen and (min-width: 600px) {
@@ -48,3 +109,10 @@
         transition: background ease-out 1s 0.1s;
       }
   }
+
+  /* .login-wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
