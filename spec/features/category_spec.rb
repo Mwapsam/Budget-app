@@ -18,9 +18,21 @@ RSpec.describe 'Category', type: :feature do
     visit(categories_path)
   end
 
-  
+  describe 'Test category index page' do
+    scenario 'I can see the name of all categories' do
+      expect(page).to have_content(@category.name)
+    end
+
+    scenario 'confirm that we are on the categories show page' do
+        expect(page).to have_current_path(categories_path)
+      end
     
-     
+      scenario 'confirm that all category names are properly displayed' do
+        @category = Category.all
+        @category.each do |category|
+          expect(page).to have_content(category.name)
+        end
+      end
 
   end
 end
