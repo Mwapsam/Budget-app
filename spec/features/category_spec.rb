@@ -27,12 +27,7 @@ RSpec.describe 'Category', type: :feature do
         expect(page).to have_current_path(categories_path)
       end
     
-      scenario 'confirm that all category names are properly displayed' do
-        @category = Category.all
-        @category.each do |category|
-          expect(page).to have_content(category.name)
-        end
-      end
+     
 
   end
 end
