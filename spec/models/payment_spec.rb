@@ -12,6 +12,11 @@ RSpec.describe Payment, type: :model do
             expect(@payment).to be_valid
         end
         
+        it "is not valid without a name" do
+            payment = build(:payment, name: nil)
+            expect(payment).to_not be_valid
+        end
+        
         
     end
 end
