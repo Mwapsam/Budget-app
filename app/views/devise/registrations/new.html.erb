@@ -3,25 +3,31 @@
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
       <div class="simple-header">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        <%= link_to "", new_session_path(resource_name), class: 'fa fa-arrow-left' %><br />
         <h1>REGISTER</h1>
         <%= f.submit "Next"%>
       </div>
+      <div class="field m-3 icon" id="icon">
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+        <%= f.label :upload_picture , class: "form-label" %><br />
+      </div>
+      <%= f.file_field :icon, id: 'image_picker', onchange: "readURL(this);", style: 'visibility:hidden;' %>
+      <hr class="line" />
+      <div class="field">
+        <%= f.label :name, class: "form-label" %><br />
+        <%= f.text_field :name, class: "form-control-input" %>
+      </div>
+
       <hr class="line" />
       <div class="field">
         <%= f.label :email, class: "form-label" %><br />
-        <%= f.email_field :email, class: "form-control" %>
+        <%= f.email_field :email, class: "form-control-input" %>
       </div>
 
       <hr class="line" />
       <div class="field">
         <%= f.label :password, class: "form-label" %>
-        <%= f.password_field :password, class: "form-control" %>
-      </div>
-      <hr class="line" />
-      <div class="field">
-        <%= f.label :password_confirmation, class: "form-label" %><br />
-        <%= f.password_field :password_confirmation, class: "form-control" %>
+        <%= f.password_field :password, class: "form-control-input" %>
       </div>
       <hr />
     <% end %>
