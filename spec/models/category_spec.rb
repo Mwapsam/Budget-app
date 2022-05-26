@@ -14,6 +14,11 @@ RSpec.describe Category, type: :model do
         it "is not valid without a name" do
             category = build(:category, name: nil)
             expect(category).to_not be_valid
+        end
+        
+        it "is not valid without a user" do
+            category = build(:category, user: nil)
+            expect(category).to_not be_valid
         end 
         
     end
