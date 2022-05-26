@@ -1,0 +1,13 @@
+<%= render 'shared/nav'%>
+<div class="card">
+  <div class="card-body">
+    <%= form_with model: @catagory_payment, url: category_payments_path do |f| %>
+        <%= f.text_field :name, placeholder: 'Name', class:'form-control mb-3'%>
+        <%= f.number_field :amount, placeholder: 'Amount', class: 'form-control mb-3'%>
+        <%= fields_for(@category) do |cat| %>
+            <%= cat.select :category_id, Category.all.map { |c| [c.name, c.id] }, {}, {class: 'form-select form-select-lg mb-3'} %>
+        <% end %> 
+        <%= f.submit 'Add Transaction', class:'btn-form'%>
+    <% end %>
+  </div>
+</div>
