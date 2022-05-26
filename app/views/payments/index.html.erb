@@ -1,0 +1,35 @@
+<%= render "shared/nav" %>
+<div class="card">
+   <div class="card-body">
+      <% if @payments.blank? %>
+         <h1>You Do Have Payments At the Moment </h1>
+      <% else %>
+         <div class='top-card'>
+            <%= image_tag @category.icon %>
+            <h1><%= @category.name %></h1>
+         </div>
+         <p class='py-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+         <hr />
+         <ul>
+            <% @payments.each do |payment| %>
+               <li>
+                  <a><%= payment.name %></a>
+                  <a>$<%= payment.amount %></a>
+               </li>
+            <% end %>
+         </ul>
+         <hr />
+      <% end %>
+      <div class="d-flex justify-content-between">
+         <p>Total Amount</p>
+         <p>$<%= @total_amount %></p>
+      </div>
+   </div>
+</div>
+
+<div class="btn-wrapper d-grid gap-2 d-md-block">
+  <button class="btn-main" type="button">
+    <%= link_to "Add Transaction", new_category_payment_path %>
+  </button>
+</div>
