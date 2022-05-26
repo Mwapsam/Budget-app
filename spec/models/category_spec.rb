@@ -11,5 +11,10 @@ RSpec.describe Category, type: :model do
             expect(@category).to be_valid
         end
         
+        it "is not valid without a name" do
+            category = build(:category, name: nil)
+            expect(category).to_not be_valid
+        end 
+        
     end
 end
