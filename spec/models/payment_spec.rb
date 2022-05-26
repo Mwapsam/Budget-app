@@ -17,6 +17,11 @@ RSpec.describe Payment, type: :model do
             expect(payment).to_not be_valid
         end
         
+        it "is not valid without a user" do
+            payment = build(:payment, user: nil)
+            expect(payment).to_not be_valid
+        end
+        
         
     end
 end
