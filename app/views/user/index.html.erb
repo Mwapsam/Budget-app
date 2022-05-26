@@ -1,0 +1,18 @@
+<section class="splash">
+  <h1 class='fst-italic fw-bold'>Kobili 💰</h1>
+
+  <div class="spinner-grow text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+
+  <div class="d-grid gap-2 col-6 mx-auto">
+  <button class="btn btn-primary" type="button">
+    <%= link_to "LOG IN", new_user_session_path, data: {turbo: false} %>
+  </button>
+  <button class="btn btn-outline-success" type="button">
+    <%= link_to "SIGN UP", new_user_registration_path, data: {turbo: false} %>
+  </button>
+</div>
+
+</section>
+
