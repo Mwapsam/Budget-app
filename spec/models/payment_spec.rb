@@ -7,5 +7,11 @@ RSpec.describe Payment, type: :model do
         @payment = create(:payment, user: @user, category_id: @category.id)
     end
     
-    
+    describe "Payment validations" do
+        it "is valid with valid attributes" do
+            expect(@payment).to be_valid
+        end
+        
+        
+    end
 end
