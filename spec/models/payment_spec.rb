@@ -22,6 +22,9 @@ RSpec.describe Payment, type: :model do
             expect(payment).to_not be_valid
         end
         
-        
+        it "is not valid without an amount" do
+            payment = build(:payment, amount: nil)
+            expect(payment).to_not be_valid
+        end
     end
 end
