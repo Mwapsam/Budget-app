@@ -31,6 +31,8 @@ RSpec.describe 'Category add page', type: :feature do
             expect(page).to have_css('input#name')
         end
         
-        
+        scenario 'confirm that the form has a submit button' do
+            expect(page).to have_css('input[type=submit]')
+        end
     end
 end
