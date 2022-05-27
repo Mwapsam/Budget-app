@@ -5,7 +5,11 @@
          <h1>You Do Have Payments At the Moment </h1>
       <% else %>
          <div class='top-card'>
-            <%= image_tag @category.icon %>
+            <% if @category.icon.present? %>
+               <%= image_tag @category.icon %>
+            <% else %>
+               <%= image_tag "category.jpg" %>
+            <% end %>
             <h1><%= @category.name %></h1>
          </div>
          <p class='py-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 

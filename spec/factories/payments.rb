@@ -1,6 +1,6 @@
 FactoryBot.define do
     factory :payment do
-        name { 'MyText' }
-        amount { 1 }
+        name { Faker::Lorem.word }
+        amount { Faker::Number.decimal(l_digits: 2) }
     end
 end

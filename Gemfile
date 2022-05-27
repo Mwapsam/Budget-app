@@ -63,6 +63,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'ffi'
+  gem 'rubocop-faker'
 end
 
 group :development do
@@ -86,3 +87,5 @@ group :test do
 end
 
 gem "cancancan", "~> 3.3"
+
+gem "rubocop", "~> 1.30"
