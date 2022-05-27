@@ -37,6 +37,10 @@ RSpec.describe 'Category show page', type: :feature do
             end
         end
 
+        scenario 'redirect to category show page' do
+            expect(page).to have_current_path(category_payments_path(@category))
+        end
+        
         
     end
 end
