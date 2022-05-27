@@ -24,6 +24,10 @@ RSpec.describe 'Login page', type: :feature do
         expect(page).to have_css('input#user_email')
         end
     
+        scenario 'confirm that the form has a password field' do
+        expect(page).to have_css('input#user_password')
+        end
+    
         
     end
 end
