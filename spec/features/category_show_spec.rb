@@ -22,6 +22,10 @@ RSpec.describe 'Category show page', type: :feature do
     end
     
     context 'Test category show page' do
+        scenario 'I can see the name of the category' do
+            expect(page).to have_content(@category.name)
+        end
+        
         
     end
 end
