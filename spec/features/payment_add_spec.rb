@@ -34,6 +34,10 @@ RSpec.describe 'Payment add page', type: :feature do
             expect(page).to have_css('input#name')
         end
         
+        scenario 'confirm that the form has an amount field' do
+            expect(page).to have_css('input#amount')
+        end
+        
         
     end
 end
