@@ -12,6 +12,10 @@ RSpec.describe 'Login page', type: :feature do
     end
     
     context 'Test login page' do
+        scenario 'confirm that we are on the login page' do
+        expect(page).to have_current_path(new_user_session_path)
+        end
+    
         
     end
 end
