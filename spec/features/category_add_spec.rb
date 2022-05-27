@@ -19,20 +19,6 @@ RSpec.describe 'Category add page', type: :feature do
     end
 
     context 'Test category add page' do
-        scenario 'confirm that we are on the category add page' do
-            expect(page).to have_current_path(new_category_path(@category))
-        end
         
-        scenario 'confirm that the page has a form' do
-            expect(page).to have_css('form')
-        end
-        
-        scenario 'confirm that the form has a name field' do
-            expect(page).to have_css('input#name')
-        end
-        
-        scenario 'confirm that the form has a submit button' do
-            expect(page).to have_css('input[type=submit]')
-        end
     end
 end
