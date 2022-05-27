@@ -16,6 +16,10 @@ RSpec.describe 'Login page', type: :feature do
         expect(page).to have_current_path(new_user_session_path)
         end
     
+        scenario 'confirm that the page has a form' do
+        expect(page).to have_css('form')
+        end
+    
         
     end
 end
