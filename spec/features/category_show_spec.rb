@@ -49,6 +49,9 @@ RSpec.describe 'Category show page', type: :feature do
             expect(page).to have_link('Add Transaction', href: new_category_payment_path(@category))
         end
         
-        
+        scenario 'confirm that when link to add payment is clicked, we are redirected to the new payment page' do
+            click_link('Add Transaction', href: new_category_payment_path(@category))
+            expect(page).to have_current_path(new_category_payment_path(@category))
+        end
     end
 end
