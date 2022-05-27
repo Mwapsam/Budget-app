@@ -22,6 +22,10 @@ RSpec.describe 'Payment add page', type: :feature do
     end
 
     context 'Test payment add page' do
+        scenario 'confirm that we are on the payment add page' do
+            expect(page).to have_current_path(new_category_payment_path(@category))
+        end
+        
         
     end
 end
