@@ -27,6 +27,10 @@ RSpec.describe 'Category add page', type: :feature do
             expect(page).to have_css('form')
         end
         
+        scenario 'confirm that the form has a name field' do
+            expect(page).to have_css('input#name')
+        end
+        
         
     end
 end
