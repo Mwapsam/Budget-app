@@ -89,3 +89,5 @@ end
 gem "cancancan", "~> 3.3"
 
 gem "rubocop", "~> 1.30"
+
+gem 'dotenv-rails'
