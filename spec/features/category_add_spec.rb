@@ -23,6 +23,10 @@ RSpec.describe 'Category add page', type: :feature do
             expect(page).to have_current_path(new_category_path(@category))
         end
         
+        scenario 'confirm that the page has a form' do
+            expect(page).to have_css('form')
+        end
+        
         
     end
 end
