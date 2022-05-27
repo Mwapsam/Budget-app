@@ -19,6 +19,10 @@ RSpec.describe 'Category add page', type: :feature do
     end
 
     context 'Test category add page' do
+        scenario 'confirm that we are on the category add page' do
+            expect(page).to have_current_path(new_category_path(@category))
+        end
+        
         
     end
 end
