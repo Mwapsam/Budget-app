@@ -45,6 +45,10 @@ RSpec.describe 'Category show page', type: :feature do
             expect(page).to have_content(@category.name)
         end
         
+        scenario 'confirm that there is a link for adding payment to category' do
+            expect(page).to have_link('Add Transaction', href: new_category_payment_path(@category))
+        end
+        
         
     end
 end
