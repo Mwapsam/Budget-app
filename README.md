@@ -2,6 +2,13 @@
 
 > Kobili is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what..
 
+
+> ### Video Link
+> [Watch video](https://www.loom.com/share/9c4d1ccafdd04a43a8f126e144408689)
+
+> ## Live Link
+> [Visit website](https://kobili.herokuapp.com)
+
 ### Preview
 
 ![screenshot](app/assets/images/127.0.0.1_3000_categories.png)
