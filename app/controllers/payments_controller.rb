@@ -8,6 +8,8 @@ class PaymentsController < ApplicationController
   end
 
   def new; end
+  
+  def edit; end
 
   def create
     @payments = current_user.payments.new(payment_params)
@@ -16,6 +18,16 @@ class PaymentsController < ApplicationController
       redirect_to category_payments_path, notice: 'Payment was successfully added'
     else
       render :new, alert: 'Failed to add payment'
+    end
+  end
+
+  def destroy
+    @payment = Payment.find(params[:id])
+
+    if @payment.destroy
+      redirect_to categories_path, notice: 'Payment was successfully deleted'
+    else
+      render :index, alert: 'Failed to delete payment'
     end
   end
 
