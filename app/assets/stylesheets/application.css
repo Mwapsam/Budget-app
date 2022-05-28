@@ -15,12 +15,30 @@
     --font: 'Poppins', sans-serif;
   }
 
+
   @media only screen and (max-width: 600px) {
     body {
       background-color: var(--neutral-color-2);
       font-family: 'Roboto Condensed', sans-serif;
-      border-top: 1px solid var(--neutral-color-1);
-      height: 100vh;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #ccc;
+      width: 100%;
+    }
+
+    .input-field {
+      width: 100%;
+      outline: none;
+      border: none;
+      height: 2.8rem;
+      padding-left: 20px;
+    }
+
+    .custom {
+      background-color: var(--neutral-color-1);
     }
 
     .login-wrapper {
@@ -37,6 +55,11 @@
       .form-control-input {
         border: none;
         padding: 0;
+      }
+
+      .fa-trash-o {
+        background-color: var(--neutral-color-2);
+        color: var(--red);
       }
 
     input[type="submit"] {
@@ -228,7 +251,9 @@
         color: var(--accent-color);
         text-decoration: none;
       }
-  }
+
+      
+}
 
   @media only screen and (min-width: 600px) {
     body {
@@ -374,6 +399,7 @@
 
       .floaters {
         color: var(--white);
+        text-decoration: none;
       }
 
       .btn-main {
