@@ -1,8 +1,8 @@
 <div class="card">
     <%= render 'shared/nav' %>
     <div class="card-body top">
-        <%= link_to 'Oldest', categories_most_ancient_list_path, class: 'float-end px-3 floaters' %>
-        <%= link_to 'Recent', categories_most_recent_list_path, class: 'float-end px-3 floaters' %>
+        <%= link_to 'Oldest', categories_most_ancient_list_path, class: 'float-end px-3 floaters mb-2' %>
+        <%= link_to 'Recent', categories_most_recent_list_path, class: 'float-end px-3 floaters mb-2' %>
     </div>
 </div>
 <div class="card">
@@ -10,10 +10,10 @@
     <p>Person Finance</p>
     </div>
 </div>
-<div class="row">
+<div class="card bg-light text-dark">
     <% @categories.each do |category| %>
-        <div class="col-md-3">
-            <div class="m-3 bg-white category-card">
+        <div class="card-body">
+            <div class="m-3 bg-white category-card shadow-lg bg-body rounded">
                 <% if category.icon.present? %>
                     <%= image_tag category.icon, class: "catagory-photo" %>
                 <% else %>
@@ -24,14 +24,17 @@
                             <p class="text-start"><%= link_to category.name, category_payments_path(category_id: category.id) %></p>
                             <p class="text-end"><%= l category.created_at.to_date, format: :long %></p>
                         </div>
-                        <p class="fw-bold p-3">$<%= Payment.where(category_id: category.id).reduce(0) { |sum, t| sum + t.amount } %></p>
+                        <div class="delete-category">
+                            <p class="fw-bold p-3">$<%= Payment.where(category_id: category.id).reduce(0) { |sum, t| sum + t.amount } %></p>
+                            <%= button_to ''.html_safe, category_path(id: category.id), method: :delete, class: 'fa fa-trash-o btn btn-danger' %>
+                        </div>
                     </div>
             </div>
         </div>
     <% end %>
 </div>
 <div class="btn-wrapper d-grid gap-2 d-md-block">
-  <button class="btn-main" type="button">
+  <button class="btn-main" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add Category">
     <%= link_to 'Add Category', new_category_path %>
   </button>
 </div>
