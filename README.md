@@ -14,7 +14,7 @@
 ![screenshot](app/assets/images/127.0.0.1_3000_categories.png)
 
 
-# How to build the Recipe app
+# How to build the Budget app
 The end result should follow the data model below (this is an Entity Relationship Diagram that you are already familiar with):
 
 > ![](app/assets/images/erd_diagram.png)
