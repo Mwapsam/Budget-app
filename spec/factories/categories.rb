@@ -1,6 +1,6 @@
 FactoryBot.define do
-    factory :category do
-        name { Faker::Lorem.word }
-        user
-    end
+  factory :category do
+    name { Faker::Lorem.word }
+    user
+  end
 end

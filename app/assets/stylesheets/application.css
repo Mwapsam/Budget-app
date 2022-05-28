@@ -3,473 +3,467 @@
  *= require_self
  */
 
- :root {
-    --primary-color: #3778c2;
-    --neutral-color-1: #434b54;
-    --neutral-color-2: #f1f3f2;
-    --neutral-color-3: #aeaeae;
-    --accent-color: #5fb523;
-    --white: #fff;
-    --black: #000;
-    --red: #f00;
-    --font: 'Poppins', sans-serif;
-  }
-
-
-  @media only screen and (max-width: 600px) {
-    body {
-      background-color: var(--neutral-color-2);
-      font-family: 'Roboto Condensed', sans-serif;
-    }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      border-bottom: 1px solid #ccc;
-      width: 100%;
-    }
-
-    .input-field {
-      width: 100%;
-      outline: none;
-      border: none;
-      height: 2.8rem;
-      padding-left: 20px;
-    }
-
-    .custom {
-      background-color: var(--neutral-color-1);
-    }
-
-    .login-wrapper {
-        height: 100vh;
-        width: 100%;
-      }
-
-      .login {
-          width: 100%;
-          height: min-height;
-          background-color: var(--white);
-      }
-
-      .form-control-input {
-        border: none;
-        padding: 0;
-      }
-
-      .fa-trash-o {
-        background-color: var(--neutral-color-2);
-        color: var(--red);
-      }
-
-    input[type="submit"] {
-        color: var(--white);
-        background-color: var(--primary-color);
-        border: none;
-    }
-
-    input[type="email"], input[type="password"]:focus {
-        border: none;
-        padding: 0 20px;
-        width: 100%;
-    }
-
-      .form-label {
-          margin: 0;
-          padding: 0 15px;
-          color: var(--neutral-color-1);
-      }
-
-      .simple-header {
-        background-color: var(--primary-color);
-        color: var(--white);
-        width: 100%;
-        height: 70px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 30px;
-        padding: 15px;
-      }
-
-      .links a {
-        color: var(--neutral-color-1);
-        text-decoration: none;
-        display: flex;
-        justify-content: center;
-      }
-
-      .line {
-        margin: 0 30px 15px 20px;
-        text-align: center;
-        height: 1px;
-        background-color: var(--neutral-color-1);
-      }
-
-      .icon {
-        display: flex;
-        align-items: center;
-      }
-
-      .icon i {
-        font-size: 35px;
-        color: var(--neutral-color-3);
-      }
-
-      .fa { 
-        color: var(--white);
-        text-decoration: none;
-      }
-
-      .fa:hover {
-        color: var(--white);
-      }
-
-      .catagory-photo {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto;
-        padding: 5px;
-      }
-
-      .category-card {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        grid-gap: 10px;
-      }
-
-      .nav-main {
-        background-color: var(--primary-color);
-        height: 70px;
-        color: var(--white);
-      }
-
-      .nav-main a {
-        color: var(--white);
-        text-decoration: none;
-      }
-
-      .trans-text {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding: 10px 0;
-        margin: 0;
-      }
-
-      .trans-text a {
-        text-decoration: none;
-        color: var(--neutral-color-1)
-      }
-
-      .top {
-        background: var(--primary-color);
-        padding: 0;
-        margin: 0;
-      }
-
-      .nav-items {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-      }
-
-      .nav-items li {
-        list-style: none;
-      }
-
-      .floaters {
-        color: var(--white);
-      }
-
-      .btn-main {
-        color: var(--white);
-        border: none;
-        margin: 10px;
-        height: 60px;
-        border: 1px solid var(--white);
-        cursor: pointer;
-        background-color: var(--accent-color);
-      }
-
-      .btn-main a {
-        color: var(--white);
-        text-decoration: none;
-      }
-      
-      .btn-wrapper {
-        background-color: var(--accent-color);
-        width: 100%;
-        height: 80px;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-      }
-
-      .top-card {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        margin: 0;
-        padding: 0;
-      }
-
-      .top-card img {
-        width: 80px;
-        height: 80px;
-        object-fit: cover;
-      }
-
-      .btn-form {
-        background-color: var(--accent-color);
-        color: var(--white);
-        width: 100%;
-        height: 40px;
-        margin: 10px 0;
-        cursor: pointer;
-        border-radius: 3px;
-      }
-
-      .splash {
-        background-color: var(--neutral-color-2);
-        border: 1px solid var(--neutral-color-1);
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        align-self: center;
-        margin: 5px;
-      }
-
-      .btn-primary a {
-        color: var(--white);
-        text-decoration: none;
-      }
-
-      .btn-outline-success a {
-        color: var(--accent-color);
-        text-decoration: none;
-      }
-
-      
+:root {
+  --primary-color: #3778c2;
+  --neutral-color-1: #434b54;
+  --neutral-color-2: #f1f3f2;
+  --neutral-color-3: #aeaeae;
+  --accent-color: #5fb523;
+  --white: #fff;
+  --black: #000;
+  --red: #f00;
+  --font: 'Poppins', sans-serif;
 }
 
-  @media only screen and (min-width: 600px) {
-    body {
-        min-height: 100vh;
-        overflow-y: auto;
-        box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
-        background-color: var(--neutral-color-2);
-        font-family: var(--font);
-        transition: background ease-out 1s 0.1s;
-      }
-
-      .login-wrapper {
-        height: 100vh;
-        width: 100%;
-      }
-
-      .login {
-          width: 100%;
-          height: min-height;
-          background-color: var(--white);
-      }
-
-      .form-control-input {
-        border: none;
-        padding: 0;
-      }
-
-    input[type="submit"] {
-        color: var(--white);
-        background-color: var(--primary-color);
-        border: none;
-    }
-
-    input[type="email"], input[type="password"]:focus {
-        border: none;
-        padding: 0 20px;
-        width: 100%;
-    }
-
-      .form-label {
-          margin: 0;
-          padding: 0 15px;
-          color: var(--neutral-color-1);
-      }
-
-      .simple-header {
-        background-color: var(--primary-color);
-        color: var(--white);
-        width: 100%;
-        height: 70px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 30px;
-        padding: 15px;
-      }
-
-      .links a {
-        color: var(--neutral-color-1);
-        text-decoration: none;
-        display: flex;
-        justify-content: center;
-      }
-
-      .line {
-        margin: 0 30px 15px 20px;
-        text-align: center;
-        height: 1px;
-        background-color: var(--neutral-color-1);
-      }
-
-      .icon {
-        display: flex;
-        align-items: center;
-      }
-
-      .icon i {
-        font-size: 35px;
-        color: var(--neutral-color-3);
-      }
-
-      .fa { 
-        color: var(--white);
-        text-decoration: none;
-      }
-
-      .fa:hover {
-        color: var(--white);
-      }
-
-      .catagory-photo {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto;
-        padding: 5px;
-      }
-
-      .category-card {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        grid-gap: 10px;
-      }
-
-      .nav-main {
-        background-color: var(--primary-color);
-        height: 70px;
-        color: var(--white);
-      }
-
-      .nav-main a {
-        color: var(--white);
-        text-decoration: none;
-      }
-
-      .trans-text {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding: 10px 0;
-        margin: 0;
-      }
-
-      .trans-text a {
-        text-decoration: none;
-        color: var(--neutral-color-1)
-      }
-
-      .top {
-        background: var(--primary-color);
-        padding: 0;
-        margin: 0;
-      }
-
-      .nav-items {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-      }
-
-      .nav-items li {
-        list-style: none;
-      }
-
-      .floaters {
-        color: var(--white);
-        text-decoration: none;
-      }
-
-      .btn-main {
-        color: var(--white);
-        border: none;
-        margin: 10px;
-        height: 60px;
-        border: 1px solid var(--white);
-        cursor: pointer;
-        background-color: var(--accent-color);
-      }
-
-      .btn-main a {
-        color: var(--white);
-        text-decoration: none;
-      }
-      
-      .btn-wrapper {
-        background-color: var(--accent-color);
-        width: 100%;
-        height: 80px;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-      }
-
-      .top-card {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        margin: 0;
-        padding: 0;
-      }
-
-      .top-card img {
-        width: 80px;
-        height: 80px;
-        object-fit: cover;
-      }
-
-      .btn-form {
-        background-color: var(--accent-color);
-        color: var(--white);
-        width: 100%;
-        height: 40px;
-        margin: 10px 0;
-        cursor: pointer;
-        border-radius: 3px;
-      }
-
-      .splash {
-        background-color: var(--neutral-color-2);
-        border: 1px solid var(--neutral-color-1);
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        align-self: center;
-        margin: 5px;
-      }
-
-      .btn-primary a {
-        color: var(--white);
-        text-decoration: none;
-      }
-
-      .btn-outline-success a {
-        color: var(--accent-color);
-        text-decoration: none;
-      }
-      
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: var(--neutral-color-2);
+    font-family: 'Roboto Condensed', sans-serif;
   }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+  }
+
+  .input-field {
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 2.8rem;
+    padding-left: 20px;
+  }
+
+  .custom {
+    background-color: var(--neutral-color-1);
+  }
+
+  .login-wrapper {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .login {
+    width: 100%;
+    background-color: var(--white);
+  }
+
+  .form-control-input {
+    border: none;
+    padding: 0;
+  }
+
+  .fa-trash-o {
+    background-color: var(--neutral-color-2);
+    color: var(--red);
+  }
+
+  input[type="submit"] {
+    color: var(--white);
+    background-color: var(--primary-color);
+    border: none;
+  }
+
+  input[type="email"],
+  input[type="password"]:focus {
+    border: none;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .form-label {
+    margin: 0;
+    padding: 0 15px;
+    color: var(--neutral-color-1);
+  }
+
+  .simple-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 15px;
+  }
+
+  .links a {
+    color: var(--neutral-color-1);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .line {
+    margin: 0 30px 15px 20px;
+    text-align: center;
+    height: 1px;
+    background-color: var(--neutral-color-1);
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon i {
+    font-size: 35px;
+    color: var(--neutral-color-3);
+  }
+
+  .fa {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .fa:hover {
+    color: var(--white);
+  }
+
+  .catagory-photo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  .category-card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 10px;
+  }
+
+  .nav-main {
+    background-color: var(--primary-color);
+    height: 70px;
+    color: var(--white);
+  }
+
+  .nav-main a {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .trans-text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  .trans-text a {
+    text-decoration: none;
+    color: var(--neutral-color-1);
+  }
+
+  .top {
+    background: var(--primary-color);
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .nav-items li {
+    list-style: none;
+  }
+
+  .floaters {
+    color: var(--white);
+  }
+
+  .btn-main {
+    color: var(--white);
+    margin: 10px;
+    height: 60px;
+    border: 1px solid var(--white);
+    cursor: pointer;
+    background-color: var(--accent-color);
+  }
+
+  .btn-main a {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .btn-wrapper {
+    background-color: var(--accent-color);
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+
+  .top-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .top-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+
+  .btn-form {
+    background-color: var(--accent-color);
+    color: var(--white);
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .splash {
+    background-color: var(--neutral-color-2);
+    border: 1px solid var(--neutral-color-1);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+    margin: 5px;
+  }
+
+  .btn-primary a {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .btn-outline-success a {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    min-height: 100vh;
+    overflow-y: auto;
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+    background-color: var(--neutral-color-2);
+    font-family: var(--font);
+    transition: background ease-out 1s 0.1s;
+  }
+
+  .login-wrapper {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .login {
+    width: 100%;
+    background-color: var(--white);
+  }
+
+  .form-control-input {
+    border: none;
+    padding: 0;
+  }
+
+  input[type="submit"] {
+    color: var(--white);
+    background-color: var(--primary-color);
+    border: none;
+  }
+
+  input[type="email"],
+  input[type="password"]:focus {
+    border: none;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .form-label {
+    margin: 0;
+    padding: 0 15px;
+    color: var(--neutral-color-1);
+  }
+
+  .simple-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 15px;
+  }
+
+  .links a {
+    color: var(--neutral-color-1);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .line {
+    margin: 0 30px 15px 20px;
+    text-align: center;
+    height: 1px;
+    background-color: var(--neutral-color-1);
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon i {
+    font-size: 35px;
+    color: var(--neutral-color-3);
+  }
+
+  .fa {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .fa:hover {
+    color: var(--white);
+  }
+
+  .catagory-photo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  .category-card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 10px;
+  }
+
+  .nav-main {
+    background-color: var(--primary-color);
+    height: 70px;
+    color: var(--white);
+  }
+
+  .nav-main a {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .trans-text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  .trans-text a {
+    text-decoration: none;
+    color: var(--neutral-color-1);
+  }
+
+  .top {
+    background: var(--primary-color);
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .nav-items li {
+    list-style: none;
+  }
+
+  .floaters {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .btn-main {
+    color: var(--white);
+    margin: 10px;
+    height: 60px;
+    border: 1px solid var(--white);
+    cursor: pointer;
+    background-color: var(--accent-color);
+  }
+
+  .btn-main a {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .btn-wrapper {
+    background-color: var(--accent-color);
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+
+  .top-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .top-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+
+  .btn-form {
+    background-color: var(--accent-color);
+    color: var(--white);
+    width: 100%;
+    height: 40px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .splash {
+    background-color: var(--neutral-color-2);
+    border: 1px solid var(--neutral-color-1);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+    margin: 5px;
+  }
+
+  .btn-primary a {
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .btn-outline-success a {
+    color: var(--accent-color);
+    text-decoration: none;
+  }
+}

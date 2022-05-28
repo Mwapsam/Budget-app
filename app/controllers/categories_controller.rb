@@ -15,7 +15,7 @@ class CategoriesController < ApplicationController
     @user = current_user
     @categories = Category.all
   end
-    
+
   def new
     @catagory = Category.new
   end

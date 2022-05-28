@@ -8,7 +8,7 @@ class PaymentsController < ApplicationController
   end
 
   def new; end
-  
+
   def edit; end
 
   def create
