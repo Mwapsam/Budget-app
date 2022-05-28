@@ -14,8 +14,8 @@ Rails.application.routes.draw do
   get 'categories/most_recent_list'
   get 'categories/most_ancient_list'
 
-  resources :categories, only: %i[index new create show] do
-    resources :payments, only: %i[index new create]
+  resources :categories, only: %i[index new create show destroy update] do
+    resources :payments, only: %i[index new create destroy update]
   end
 
   resources :users, only: %i[index]
