@@ -101,7 +101,7 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
+-  An acknowledgment to Gregorie Vella on Behance, the author of the original design.
 - Many thanks to Microverse
 
 ## 📝 License
