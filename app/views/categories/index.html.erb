@@ -21,7 +21,10 @@
                 <% end %>
                     <div class="trans-text">
                         <div>
-                            <p class="text-start"><%= link_to category.name, category_payments_path(category_id: category.id) %></p>
+                            <div class="d-flex gap-3 m-2">
+                                <p class="text-start"><%= link_to category.name, category_payments_path(category_id: category.id) %></p>
+                                <p class="text-start"><%= link_to '', category_payments_path(category_id: category.id), class: 'fa fa-credit-card-alt icons' %></p>
+                            </div>
                             <p class="text-end"><%= l category.created_at.to_date, format: :long %></p>
                         </div>
                         <div class="delete-category">

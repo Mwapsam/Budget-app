@@ -266,6 +266,14 @@
     width: 100%;
   }
 
+  .icons {
+    color: var(--neutral-color-1) !important;
+  }
+
+  .icons:hover {
+    color: var(--neutral-color-1) !important;
+  }
+
   .login {
     width: 100%;
     background-color: var(--white);
