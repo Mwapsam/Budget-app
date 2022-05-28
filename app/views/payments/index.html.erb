@@ -1,0 +1,45 @@
+<%= render "shared/nav" %>
+<div class="d-flex  justify-content-between">
+   <%= link_to '', categories_path, class: "fa fa-arrow-circle-left btn btn-primary m-3"  %>
+   <%= button_to "", category_payment_path(category_id: @category.id, id: @category), method: :delete, class: 'fa fa-trash-o btn btn-danger m-3' %>
+</div>
+<div class="card">
+   <div class="card-body">
+      <% if @payments.blank? %>
+         <p>You Do Have Payments At the Moment </p>
+      <% else %>
+         <div class='top-card'>
+            <% if @category.icon.present? %>
+               <%= image_tag @category.icon %>
+            <% else %>
+               <%= image_tag "category.jpg" %>
+            <% end %>
+            <h1><%= @category.name %></h1>
+         </div>
+         <div class="border border-success p-2 border-opacity-10 mt-3">
+            <p class='py-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+         </div>
+         <hr />
+         <ul>
+            <% @payments.each do |payment| %>
+               <li class="payments">
+                  <a><%= payment.name %></a>
+                  <a>$<%= payment.amount %></a>
+               </li>
+            <% end %>
+         </ul>
+         <hr />
+      <% end %>
+      <div class="d-flex justify-content-between">
+         <p>Total Amount</p>
+         <p>$<%= @total_amount %></p>
+      </div>
+   </div>
+</div>
+
+<div class="btn-wrapper d-grid gap-2 d-md-block">
+  <button class="btn-main" type="button">
+    <%= link_to "Add Transaction", new_category_payment_path %>
+  </button>
+</div>

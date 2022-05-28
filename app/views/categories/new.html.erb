@@ -1,0 +1,12 @@
+<%= render 'shared/nav'%>
+<div class="card">
+    <div class="card-body">
+        <%= form_with model: @category, url: categories_path do |f| %>
+            <div class="mb-3">
+                <%= f.file_field :icon, placeholder: "Add picture", class: "form-control", type:"file", id:"formFile" %>
+            </div>
+            <%= f.text_field :name, placeholder: "Name", class: "form-control"%>
+            <%= f.submit 'Add Category', class: 'btn-form'%>
+        <% end %>
+    </div>
+</div>
